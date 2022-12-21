@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Lost In Translation</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com"  />
         <link
           href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
           rel="stylesheet"
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
               src={"/assets/intro_image.png"}
             />
             <p className="font-libre leading-7">
-              As I conversed with an old friend from Ukraine, I was struck by
+              {`As I conversed with an old friend from Ukraine, I was struck by
               the sadness in her eyes as she told me about her grandfather's
               recent passing. Though we both spoke Russian, my language skills
               had unfortunately deteriorated over the years, and her English was
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
               "прости" (sorry) and a weak "все будет хорошо" (everything will be
               okay). It was as if the emotion and sentiment I wanted to express
               were stuck in my head, unable to find their way out through my
-              flawed Russian.
+              flawed Russian.`}
             </p>
           </div>
           <p className="mt-10 font-libre leading-7">
@@ -278,21 +278,21 @@ const Home: NextPage = () => {
             </div>
           </div>
           <p className="mt-8 font-libre leading-7">
-            Below you can play around with a simple example of the application
+            {`Below you can play around with a simple example of the application
             of LLM's for translation. It uses the gpt-3 api and some realitively
             naive prompt engineering to provide contexual translations for a
-            basic set of languages.
+            basic set of languages.`}
           </p>
           <p className="mt-8 w-full font-libre italic leading-7 opacity-80">
             tip: if you want a good starting example, you can try the phrase{" "}
-            <strong>"it's not you, it's me".</strong>
+            <strong>{`"it's not you, it's me".`}</strong>
           </p>
           <div className="mt-8 w-full rounded-sm border border-2 border-gray-400 bg-zinc-800/5 p-4">
             <div className="flex w-full items-center space-x-4 font-libre">
               <p>From Language: </p>
               <Select
                 isSearchable={true}
-                onChange={(e) => setFrom(e.value)}
+                onChange={(e: any) => setFrom(e.value)}
                 value={{ value: from, label: from }}
                 styles={{
                   control: (base, state) => ({
@@ -345,7 +345,7 @@ const Home: NextPage = () => {
                   }),
                 }}
                 isSearchable={true}
-                onChange={(e) => setTo(e.value)}
+                onChange={(e : any) => setTo(e.value)}
                 options={languages.map((language: string) => ({
                   value: language,
                   label: language,
@@ -410,11 +410,11 @@ const Home: NextPage = () => {
             specific references and metaphors.
           </p>
           <p className="mt-12 font-libre leading-7">
-            The various intersectionalities of countries around the world are
+            {`The various intersectionalities of countries around the world are
             growing. As they do, we can hopefully use these contextual aware
             models to communicate amongst ourselves that take each individual's
             environment, culture, race, and place of birth into account. And who
-            knows, maybe someday in the future, there will be something to be
+            knows, maybe someday in the future, there will be something to be`}
             ... <strong>Found in Translation</strong>
           </p>
         </div>
