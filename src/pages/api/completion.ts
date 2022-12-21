@@ -23,7 +23,7 @@ export default async function handler(
     presence_penalty: 0,
   });
 
-  if (!response || response.data || (response.data as any).choices.length > 0) {
+  if (!response || !response.data || (response.data as any).choices.length === 0) {
     return res.status(500).send("Failed");
   }
 
